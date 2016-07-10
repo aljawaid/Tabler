@@ -44,6 +44,7 @@ Features
 - Quick editing tasks by clicking on ID
 - Link to tasks on task name
 - Pagination
+- Mobile friendly
 
 Todo
 ----

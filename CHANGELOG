@@ -1,0 +1,12 @@
+Version 0.0.2
+-------------
+
+* Updated design - borders removed for more smooth design. Take care, some of the CSS uses !important :(
+* CSS and JS removed from **show.php** to `assets` folder `css` and `js`
+* **show.php** for all projects and specific project combined in one **show.php** and replaced in `tabler` folder. Checking variable **$projects** value.
+
+
+Version 0.0.1
+-------------
+
+* Initial release

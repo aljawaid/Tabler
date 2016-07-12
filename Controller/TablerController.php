@@ -13,7 +13,7 @@ class TablerController extends BaseController
 
 	$TablerData = $this->tablerModel->TablerFullTasksList($project['id']);
 
-        $this->response->html($this->helper->layout->app('tabler:project/show', array('title' => t('Tabler'),
+        $this->response->html($this->helper->layout->app('tabler:tabler/show', array('title' => t('Tabler'),
             'project' => $project,
 	    'TablerData' => $TablerData
         )));
@@ -27,7 +27,7 @@ class TablerController extends BaseController
 	$projectAccess = $this->tablerModel->TablerGetProjectid($user['id']);
 	$TablerData = $this->tablerModel->TablerFullTasksListAll($projectAccess);
 
-        $this->response->html($this->helper->layout->app('tabler:project_overview/show', array('title' => t('Tabler'),
+        $this->response->html($this->helper->layout->app('tabler:tabler/show', array('title' => t('Tabler - All projects'),
             'project' => 'Allprojects',
 	    'TablerData' => $TablerData
         )));

@@ -1,0 +1,6 @@
+# Vendored and minified third-party stylesheets are maintained upstream.
+assets/css/bootstrap.min.css
+assets/css/pgwmodal.min.css
+assets/css/tablesort.columnSelector.css
+assets/css/theme.blue.css
+assets/css/theme.bootstrap.css

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Registers Tabler routes, navigation and authenticated access.
+ * Registers Tabler routes, navigation, translations and authenticated access.
  *
  * Related test file: tests/ControllerContractTest.php.
  */
@@ -10,6 +10,7 @@ namespace Kanboard\Plugin\Tabler;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Security\Role;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base
 {
@@ -25,6 +26,11 @@ class Plugin extends Base
         $this->template->hook->attach('template:dashboard:sidebar', 'Tabler:dashboard/dashboardsidebar');
         $this->template->hook->attach('template:project:dropdown', 'Tabler:project/dropdown');
         $this->template->hook->attach('template:project:sidebar', 'Tabler:project/sidebar');
+    }
+
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
     }
 
     public function getClasses()
@@ -58,7 +64,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return 'Table';
+        return t('Browse accessible tasks in a sortable and filterable table.');
     }
 
     public function getPluginHomepage()

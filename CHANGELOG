@@ -1,3 +1,16 @@
+Version 1.0.0 (2026-10-16)
+--------------------------
+
+* Fixed project access checks to use the current Kanboard session and complete permission model.
+* Fixed task queries for Kanboard 1.2.54 by using valid lower-case SQL aliases and safe empty access handling.
+* Removed the plugin-wide Content Security Policy override.
+* Replaced TableSorter, PgwModal and unused Bootstrap assets with a dependency-free table controller.
+* Added responsive task cards, theme-aware colours, accessible controls and user-timezone dates.
+* Escaped task data and rendered descriptions through Kanboard's Markdown helper.
+* Added British English translations and a reusable starter catalogue.
+* Added focused PHP 8.2 to 8.5 regression checks and JavaScript validation.
+
+
 Version 0.0.2
 -------------
 

@@ -49,16 +49,17 @@ class Plugin extends Base
 
     public function getPluginAuthor()
     {
-        return 'TTJ';
+        return 'TTJ, maintained by aljawaid';
     }
 
     public function getPluginVersion()
     {
-        return '0.0.1';
+        return '1.0.0';
     }
 
     public function getCompatibleVersion()
     {
+        // The focused regression matrix targets the supported Kanboard baseline.
         return '>=1.2.54';
     }
 
@@ -69,6 +70,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return '';
+        return 'https://github.com/aljawaid/Tabler';
     }
 }

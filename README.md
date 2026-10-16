@@ -1,71 +1,83 @@
-Kanboard Plugin for notes
-==========================
+# Tabler
 
-This plugin adds a new table with advanced features for viewing tasks.
+Tabler adds accessible, sortable and filterable task tables to Kanboard. It provides a project view and an all-project view while respecting the current user's Kanboard project permissions.
 
-Plugin for https://github.com/fguillot/kanboard
+## Requirements
 
-Author
-------
+- Kanboard 1.2.54 or later.
+- PHP 8.2, 8.3, 8.4 or 8.5.
+- A current browser with JavaScript enabled for interactive sorting, filtering and pagination.
 
-- TTJ
-- License MIT (splitted)
+## Features
 
-Credit
-------
-- Mottie (https://github.com/Mottie/tablesorter)
+- View tasks from one project or every active project available to the current user.
+- Sort any column; hold Shift while selecting headings to sort by multiple columns.
+- Search all visible task data or filter individual columns.
+- Choose visible columns, with preferences retained in browser-local storage.
+- Open task descriptions without leaving the table.
+- Follow task titles to the standard Kanboard task view.
+- Use the standard task menu where the current user has edit access.
+- Paginate at 10, 20 or 50 tasks, or display all matching tasks.
+- Use a mobile task-card layout with touch-sized controls.
+- Inherit Kanboard light, dark, automatic and custom theme colours.
+- Print a focused task table without interactive controls.
 
-Installation
-------------
+## Installation
 
-- Decompress the archive in the `plugins` folder
+1. Download or clone this repository into the Kanboard `plugins` directory.
+2. Ensure the resulting directory is named `Tabler` with the same capitalisation.
+3. Sign in to Kanboard and confirm that **Tabler** appears in the dashboard and project navigation.
 
-or
+The expected layout is:
 
-- Create a folder **plugins/Tabler**
-- Copy all files under this directory
+```text
+plugins/
+└── Tabler/
+    ├── Controller/
+    ├── Locale/
+    ├── Model/
+    ├── Template/
+    ├── assets/
+    └── Plugin.php
+```
 
-or
+## Use
 
-- Clone folder with git
+- Select **Tabler** from a project's menu or sidebar to view that active project.
+- Select **Tabler** from the dashboard sidebar to view tasks from all accessible active projects.
+- Select a column heading to sort it. Hold Shift while selecting another heading to add it to the sort order.
+- Use **Choose columns** to reduce the information shown. ID, project and task columns remain visible so rows keep their context.
+- Select the description button beside a task title to reveal its Kanboard-formatted description.
 
-- Requires Kanboard 1.2.54 or later.
+## Access and privacy
 
-Use
----
+- Every Tabler route requires an authenticated Kanboard user.
+- Project views verify the current user's access before querying tasks.
+- The all-project view uses Kanboard's complete permission model, including direct, group and administrator access.
+- Tabler does not replace or weaken Kanboard's Content Security Policy.
+- Column preferences remain in the current browser's local storage and are not sent to a third party.
+- Tabler has no external runtime dependencies and makes no external network requests.
 
-Advanced options for sorting, searching, filtering, etc. in tableview.
+## Compatibility checks
 
-Features
---------
+Continuous integration performs:
 
-- Define column width
-- Hide specific columns
-- Search/filter in specific columns
-- Multisorting (sort 1 column, hold SHIFT and click on 2nd column)
-- Quick editing tasks by clicking on ID
-- Link to tasks on task name
-- Pagination
-- Mobile friendly
+- PHP syntax and focused plugin regression checks on PHP 8.2 through 8.5.
+- A real plugin boot against the supported Kanboard 1.2.54 baseline.
+- Model regressions for project-scoped, multi-project and empty-access queries.
+- Template rendering checks for escaped task data and safe Markdown descriptions.
+- CSS, JavaScript, Markdown, YAML and workflow linting.
 
-Todo
-----
+Run the focused regression suite locally from this repository with a Kanboard 1.2.54 checkout:
 
-- Nothing special in pipeline
-- Maybe new design (removing borders for clean design)
+```text
+php tests/run.php C:\path\to\kanboard
+```
 
-Security issues and bugs
-------------------------
+Set `KANBOARD_PLUGINS_DIR` when the tested Kanboard checkout does not already contain this repository as `plugins/Tabler`.
 
-- **WARNING:** The Content Security Policy is changed to allowing unsafe-inline and unsafe-eval!!!
+## Licence
 
-Tested on
----------
+Tabler is released under the MIT Licence. See [LICENSE](LICENSE).
 
-- Application version: 1.0.30
-- PHP version: 5.5.9-1ubuntu4.17
-- PHP SAPI: apache2handler
-- OS version: Linux 3.13.0-74-generic
-- Database driver: sqlite
-- Database version: 3.8.2
-- Browser: Chromium 51.0.2704.106 (64-bit)
+Kanboard is separate software maintained by the [Kanboard project](https://github.com/kanboard/kanboard).

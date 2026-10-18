@@ -1,3 +1,11 @@
+Version 1.0.1 (2026-10-18)
+--------------------------
+
+* Renamed the canonical changelog to `changelog.md` so Kanboard release
+  auditing and cross-platform package preparation use the expected filename.
+* No database changes.
+
+
 Version 1.0.0 (2026-10-16)
 --------------------------
 

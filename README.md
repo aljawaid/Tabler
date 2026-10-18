@@ -80,4 +80,6 @@ Set `KANBOARD_PLUGINS_DIR` when the tested Kanboard checkout does not already co
 
 Tabler is released under the MIT Licence. See [LICENSE](LICENSE).
 
+See [changelog.md](changelog.md) for release history.
+
 Kanboard is separate software maintained by the [Kanboard project](https://github.com/kanboard/kanboard).

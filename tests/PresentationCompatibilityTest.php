@@ -3,11 +3,11 @@
 /**
  * Verifies responsive, theme-aware and accessible Tabler presentation contracts.
  *
- * Related production files: assets/css/style.css, assets/js/tabler.js and Template/tabler/show.php.
+ * Related production files: Assets/css/style.css, Assets/js/tabler.js and Template/tabler/show.php.
  */
 
-$stylesheet = file_get_contents($pluginRoot . '/assets/css/style.css');
-$javascript = file_get_contents($pluginRoot . '/assets/js/tabler.js');
+$stylesheet = file_get_contents($pluginRoot . '/Assets/css/style.css');
+$javascript = file_get_contents($pluginRoot . '/Assets/js/tabler.js');
 $template = file_get_contents($pluginRoot . '/Template/tabler/show.php');
 
 tablerAssertContains('var(--panel-background-color', $stylesheet, 'Surfaces must inherit Kanboard theme colours.');

@@ -1,3 +1,13 @@
+Version 1.0.2 (2026-10-18)
+--------------------------
+
+* FIX: Renamed the plug-in asset directory to canonical `Assets/` casing so
+  protected Linux Kanboard deployments serve the stylesheet and JavaScript
+  instead of returning HTTP 403 responses.
+* Relates to `d1b529e`.
+* No database changes.
+
+
 Version 1.0.1 (2026-10-18)
 --------------------------
 

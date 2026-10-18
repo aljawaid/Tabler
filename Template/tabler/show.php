@@ -36,8 +36,8 @@ $formatDate = function ($value) {
 };
 ?>
 
-<?= $this->asset->css('plugins/Tabler/assets/css/style.css') ?>
-<?= $this->asset->js('plugins/Tabler/assets/js/tabler.js') ?>
+<?= $this->asset->css('plugins/Tabler/Assets/css/style.css') ?>
+<?= $this->asset->js('plugins/Tabler/Assets/js/tabler.js') ?>
 
 <?php if ($project !== null): ?>
     <?= $this->projectHeader->render($project, 'ProjectOverviewController', 'show') ?>

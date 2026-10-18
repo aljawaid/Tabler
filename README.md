@@ -37,7 +37,7 @@ plugins/
     ├── Locale/
     ├── Model/
     ├── Template/
-    ├── assets/
+    ├── Assets/
     └── Plugin.php
 ```
 

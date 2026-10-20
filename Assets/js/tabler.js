@@ -50,7 +50,7 @@
 
             try {
                 stored = JSON.parse(window.localStorage.getItem(storageKey));
-            } catch (error) {
+            } catch {
                 stored = null;
             }
 
@@ -70,7 +70,7 @@
 
             try {
                 window.localStorage.setItem(storageKey, JSON.stringify(visibleColumns));
-            } catch (error) {
+            } catch {
                 // Private browsing can deny local storage without affecting table use.
             }
         }

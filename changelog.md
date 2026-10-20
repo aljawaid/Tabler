@@ -1,3 +1,11 @@
+# Changelog
+
+## v1.0.3
+
+- NEW: Add Dependabot GitHub Actions Monitoring
+- FIX: DEPENDENCY: Upgrade Super-Linter To 9.0.0
+
+
 Version 1.0.2 (2026-10-18)
 --------------------------
 
